@@ -1,88 +1,97 @@
-body {
-    font-family: 'Roboto', sans-serif;
+/* Reset some default styles */
+body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
 }
 
+/* Set background color */
+body {
+    background-color: #f3efef; /* Choose your preferred background color */
+}
+
+/* Container styling */
 .container {
-    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+    padding: 0 20px;
+    background-color: #cdc6c3; /* Add a background color to the container */
 }
 
-nav {
-    background-color: #333;
-    color: #333;
-    padding: 10px 0;
-}
-
+/* Navigation styling */
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: space-around;
+    padding: 0;
 }
 
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
+/* Sections styling */
 section {
     padding: 40px 0;
 }
 
-.center {
-    text-align: center;
+/* Responsive font sizes */
+h2 {
+    font-size: 2em;
 }
 
-.work {
-    margin-bottom: 20px;
+h4 {
+    font-size: 1.5em;
 }
 
-.work h3 {
-    color: #333;
+p {
+    font-size: 1em;
 }
 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Responsive image width */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-footer {
-    padding: 10px 0;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-}
-
-/* Media Queries for Responsive Design */
-
-@media only screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav li {
-        margin-bottom: 10px;
-    }
-}
-
+/* Responsive navigation for smaller screens */
 @media only screen and (max-width: 600px) {
-    section {
-        padding: 20px 0;
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Responsive layout adjustments */
+@media only screen and (max-width: 768px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+}
+
+/* Responsive styles for iPhone X */
+@media only screen and (max-width: 530px) and (max-height: 997px) and (-webkit-device-pixel-ratio: 3) {
+    /* Add specific styles for iPhone X */
+    body {
+        background-color: #f0f0f0; /* Change the background color for iPhone X */
+    }
+
+    .container {
+        padding: 0 10px; /* Adjust container padding for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Adjust font size for h2 on smaller screens */
+    }
+
+    h4 {
+        font-size: 1em; /* Adjust font size for h4 on smaller screens */
     }
 }
